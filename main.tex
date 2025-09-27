@@ -1,0 +1,311 @@
+\documentclass{homework}
+\usepackage{amsmath}
+
+\author{Omar Reda H Fatani - 2338450}
+\class{NE 304: Dr. Mohammed Damoom}
+\date{\today}
+\title{Homework 1}
+\address{Bayt El-Hikmah}
+
+\graphicspath{{./media/}}
+
+\begin{document} \maketitle
+
+\question \\
+The $\beta^-$-emitter \textsuperscript{28}Al (half-life 2.30 min) can be produced 
+by the radiative capture of neutrons by \textsuperscript{27}Al. The 0.0253-eV cross-section for this reaction is 0.23 b. Suppose 
+that a small, 0.01-g aluminum target is placed in a beam of 0.0253-eV neutrons, $\phi = 3 \times 10^8$ neutrons/cm\textsuperscript{2}-sec, 
+which strikes the entire target. Calculate:
+\begin{enumerate}
+    \item[(a)] the neutron density in the beam;
+    \item[(b)] the rate at which \textsuperscript{28}Al is produced;
+    \item[(c)] the maximum activity (in curies) that can be produced in this experiment. 
+\end{enumerate}
+
+\begin{sol}
+  \begin{itemize}
+      \item{(a)}
+      \begin{gather*}
+      \text{For thermal neutrons, the velocity is approximately 2200 m/s.} \\
+      n = I/n 
+        \\
+      n = \frac{3\times 10^8}{2200\times10^2} = 1363\, neutron/cm^3
+      \end{gather*}
+    \item{(b)}
+  \begin{gather*}
+    \text{From table II.3, } \rho_{\text{Al}} = 2.699 \, \text{g/cm}^3
+    \text{ and } N_{\text{Al}} = 0.06024 \times 10^{24} \, \text{Atoms/cm}^3 \\
+    \dot{R} = \sigma \phi NAX = 0.23\times 3\times 10^8\times 0.06024 \times 
+    \frac{0.01}{2.699} = 15400\,Interactions/sec
+  \end{gather*}
+    \item{(b)}
+  \begin{gather*}
+  \text{At saturation activity, production rate = decary rate, } A_{\text{max}} = \dot{R}\\
+  A_{\text{max}} = \frac{15400\,Bq}{3.7\times 10^10} = 4.16 \times 10^{-7}\, Ci
+  \end{gather*}
+
+  \end{itemize}
+ % the empty line bellow is needed to avoid extra space.
+  
+\end{sol}
+
+\question \\
+Calculate the mean free path of 1-eV neutrons in graphite. The total cross-section of
+carbon at this energy is 4.8 b.
+
+\begin{sol}
+  \begin{gather*}
+  \text{From table II.3, } N_{\text{C(graphite)}} = 0.08023\times 10^{-24} \\
+  \bar{X} = \frac{1}{\sigma_{\text{t}} N} = \frac{1}{4.8 \times 0.08023} = 2.597\,cm
+  \end{gather*}
+
+\end{sol}
+
+\question \\
+A beam of 2-MeV neutrons is incident on a slab of heavy water (D\textsubscript{2}O). The total cross-sections of deuterium and oxygen at this energy are 2.6 b and 1.6 b, respectively.
+
+\begin{enumerate}
+    \item[(a)] What is the macroscopic total cross-section of D\textsubscript{2}O at 2 MeV?
+    \item[(b)] How thick must the slab be to reduce the intensity of the uncollided beam by a factor of 10?
+    \item[(c)] If an incident neutron has a collision in the slab, what is the relative probability that it collides with deuterium?
+\end{enumerate}
+
+\begin{sol}
+  \begin{itemize}
+    \item{(a)} 
+      \begin{gather*}
+      \text{From table II.3, } N_{D_{2}O} = 0.03323\times 10^{-24} \\
+      \sigma = 2\sigma_{D} + \sigma_{O} = (2\times 2.6) + (1.6) = 6.8\,b\\
+      \textstyle \sum_{t} = \sigma_{\text{t}}N = 6.8 \times 0.03323 = 0.2256\,cm^{-1}
+      \end{gather*}
+    \item{(b)}
+    \begin{gather*}
+    \frac{I_{\text{(x)}}}{I_{0}} = e^{-\textstyle \sum_{t}x} \\
+    10 = e^{-0.2256x} \text{, } x = 10.21\,cm
+    \end{gather*}
+    \item{(c)}
+    \begin{gather*}
+     P(D|collision) = \frac{\textstyle \sum_{D}}{\textstyle \sum_{t}} = \frac{2\sigma_{D}N}{\textstyle \sum_{t}} \\
+     P(D|collision) = \frac{2\times 2.6\times 0.03323 }{0.2256} = 0.766 = 76.6\%
+    \end{gather*}
+    \end{itemize}
+  \end{sol}
+
+\question \\
+Stainless steel, type 304 having a density of $7.86 \,\text{g/cm}^3$, has been used in some reactors. 
+The nominal composition by weight of this material is as follows: carbon, $0.08\%$; chromium, $19\%$; nickel, $10\%$; iron, the remainder. 
+Calculate the macroscopic absorption cross-section of SS-304 at $0.0253 \,\text{eV}$.
+
+\begin{sol}
+\vspace{1em}
+\noindent Since composite materials (alloys) have densities of their own, the atomic densities of each material should be derived in regards to the alloy density.
+  \begin{gather*}
+    \Sigma_a = \sum_i N_i \sigma_{a,i}
+    \qquad \text{with} \qquad
+    N_i = \frac{\rho w_i N_A}{A_i} \\
+    \text{subsituting them will give: } \\
+    \boxed{\Sigma_a = \rho_{alloy} N_A \sum_i \frac{w_i}{A_i}\,\sigma_{a,i}}\\
+    \text{Values of }w_{i}, A_{i} \text{ and }\sigma_{a,i}\text{ is obtained from table II.3}\\
+    \Sigma_a = (\rho_{alloy})(N_A)[(\frac{w_{C}}{A_{C}}\times \sigma_{C})+(\frac{w_{Cr}}{A_{Cr}}\times \sigma_{Cr})+(\frac{w_{Ni}}{A_{Ni}}\times \sigma_{Ni})+(\frac{w_{Fe}}{A_{Fe}}\times \sigma_{Fe})]\\
+    \Sigma_a = (7.86)(0.6022)[(\frac{0.0008}{12}\times 0.0034)+(\frac{0.19}{52}\times 3.1)+(\frac{0.1}{59}\times 4.43)+(\frac{0.7092}{56}\times 2.55)]\\
+    \Sigma_a = 0.242\,cm^{-1}
+  \end{gather*}
+\end{sol}
+
+\question \\
+There are no resonances in the total cross-section of $^{12}\text{C}$ 
+from 0.01 eV to cover 1 MeV. If the radiative capture cross-section of this nuclide 
+at 0.0253 eV is 3.4 mb, what is the value of $\sigma_{\gamma}$ at 1 eV?
+\begin{sol}
+  \begin{gather*}
+  \sigma_{\gamma}(E) = \sigma_{\gamma}(E_{0}) \times \sqrt{\frac{E_{0}}{E}} \\
+  \sigma_{\gamma}(1\,eV) = 3.4\times 10^{-27} \times \sqrt{\frac{0.0253}{1}} = 0.541\,mb
+  \end{gather*}
+\end{sol}
+
+\question \\
+The first resonance in the scattering cross-section of the nuclide 
+$^{A}Z$ occurs at 1.24 MeV. The separation energies of nuclides 
+$^{A-1}Z$, $^{A}Z$, and $^{A+1}Z$ are 7.00, 7.50, and 8.00 MeV, respectively. 
+Which nucleus and at what energy above the ground state is the level that 
+gives rise to this resonance?
+
+\begin{sol}
+  \begin{gather*}
+    E^{*} = S_{n}\!\left(^{A+1}Z\right) + E\\
+    E^{*} = 8 + 1.24 = 9.24\,MeV
+  \end{gather*}
+\end{sol}
+
+\question \\
+A 2-MeV neutron traveling in water has a head-on collision with an $^{16}\mathrm{O}$ nucleus.
+\begin{enumerate}[label={(\alph*)}]
+\item What are the energies of the neutron and nucleus after the collision?
+\item Would you expect the water molecule involved in the collision to remain intact after the event?
+\end{enumerate}
+
+\begin{sol}
+  \begin{itemize}
+      \item{(a)}
+        \begin{gather*}
+        \text{Neutron colliding head-on } \rightarrow \theta_{max} = \pi \rightarrow E^{'} = (\frac{A-1}{A+1})^{2}E \\
+        E^{'} = (\frac{16-1}{16+1})^{2}\times 2 = 1.557\,MeV\\
+        E_{A} = 2 - 1.557 = 0.442\,MeV
+    \end{gather*}
+       \item{(b)}
+      \\
+      \\ 
+      No, because the oxygen molecule will recoil with an energy of  4 MeV while the H-O bond in the water molecule is held with an energy of 5 eV.
+  \end{itemize}
+\end{sol}
+
+\question\\
+A 1-MeV neutron strikes a $^{12}\mathrm{C}$ nucleus initially at rest. 
+If the neutron is elastic scattered through an angle of $90^{\circ}$:
+\begin{enumerate}[label=\textbf{(\alph*)}]
+\item What is the energy of the scattered neutron?
+\item What is the energy of the recoiling nucleus?
+\item At what angle does the recoiling nucleus appear?
+\end{enumerate}
+
+\begin{sol}
+  \begin{itemize}
+    \item{(a)}
+    \begin{gather*}
+      E' = \frac{E}{(A+1)^2} 
+      \left[ \cos \vartheta + \sqrt{A^{2} - \sin^{2} \vartheta} \right]^2\\
+      E' = \frac{1}{(12+1)^2}[ \cos(90) + \sqrt{12^{2} - \sin^{2}(90)}]^{2} = 0.846\,MeV
+    \end{gather*}
+    \item{(b)}
+    \begin{gather*}
+      E_{A} = E - E' = 1 - 0.846 = 0.154 MeV
+    \end{gather*}
+    \item{(c)}\\\\
+    For a 1 MeV neutron moving at 0.46\% speed of light, the lorentz factor is insignificant. Thus, the 
+    nonrelativistic model could be applied to derive the angle of recoiled nucleus.
+    \img<elastic>[0.5]{Elastic scattering of a neutron by a nucleus.}{Elastic.png}
+    \begin{gather*}
+      P = P' + P_{A}
+      \begin{cases}
+        x: \quad P = P'\cos \theta + P_{A} \cos \phi \quad \rightarrow \quad P_{A} \cos \phi = P - P' \cos \theta \\
+        y: \quad 0 = P'\sin \theta - P_{A}\sin \phi \quad \rightarrow \quad P_{A} \sin \phi = P' \sin \theta
+      \end{cases} \\
+      \text{Solving the x and y components by elemination:}\\
+      \frac{P_A \sin \phi}{P_A \cos \phi} = \frac{P'\sin \theta}{P - P'\cos \theta}\\
+      \text{Given that }P =\sqrt{2mE} \text{, } P' = \sqrt{2mE'} \text{ and }\theta = 90^\circ \text{,} \\
+      \tan \phi = \sqrt{\frac{E'}{E}} \rightarrow \phi = \tan^{-1} (\sqrt{\frac{E'}{E}})\\
+      \boxed{\phi = \tan^{-1}(\sqrt{\frac{0.846}{1}}) = 42.6^\circ}
+    \end{gather*}
+  \end{itemize}
+\end{sol}
+
+\question\\
+Show that the average fractional energy loss in \% in elastic scattering 
+for large $A$ is given approximately by:
+\begin{gather*}
+\frac{\overline{\Delta E}}{E} \simeq \frac{200}{A}
+\end{gather*}
+
+\begin{sol}
+  \begin{gather*}
+  \frac{\overline{\Delta E}}{E} = \frac{1}{2}(1-(\frac{A-1}{A+1}))^{2} \rightarrow f(A) = \frac{1}{2}\left[ \frac{(A + 1)^{2}}{(A + 1)^{2}}-\frac{(A-1)^{2}}{(A+1)^{2}} \right]
+  =  \left[ \frac{2A}{(A + 1)^{2}} \right]\\
+  \text{Since this is an asymptotic function, with leading term 1/A, set  } c = \lim_{A \to \infty} A f(A) \text{ to find it's coefficient}\\
+  \lim_{A \to \infty} A f(A) = \lim_{A \to \infty} \left[ \frac{2A^{2}}{(A + 1)^{2}} \right] \rightarrow \text{Applying L’Hôpital,} \lim_{A \to \infty}\left[ \frac{4A}{2A + 2} \right]
+  \rightarrow 2 \\
+  \lim_{A \to \infty} A f(A) = 2 \rightarrow  \left[ \lim_{A \to \infty} f(A) \right] \times 100 \% = \left[\frac{2}{A}\right] \times 100\% \\
+  \boxed{\frac{\overline{\Delta E}}{E} \times 100\% \simeq \frac{200}{A}\%}
+  \end{gather*}
+\end{sol}
+\question \\
+The 2,200 meters-per-second flux in an ordinary water reactor is 
+$1.5 \times 10^{13}$ neutrons/cm$^{2}\!\cdot$sec. 
+At what rate are the thermal neutrons absorbed by the water?
+
+\begin{sol}
+  \begin{gather*}
+    \text{Since water is considered a 1/v nuclei, the absorption density can be found with } F_{a} = \textstyle \sum_{a}(E_{0})\varPhi_{0}\\
+    F_{a} = 0.02220 \times 1.5 \times 10^{13} = 3.33\times 10^{11}\, Neutrons/cm^{3}\cdot s
+  \end{gather*}
+\end{sol}
+
+\question\\
+A tiny beryllium target located at the center of a three-dimensional Cartesian 
+coordinate system is bombarded by six beams of 0.0253-eV neutrons of intensity 
+$3 \times 10^{8}$ neutrons/cm$^{2}\!\cdot$sec, each incident along a different axis.
+
+\begin{enumerate}[label=(\alph*)]
+\item What is the 2,200 meters-per-second flux at the target?
+\item How many neutrons are absorbed in the target per cm$^{3}$/sec?
+\end{enumerate}
+
+\begin{sol}
+  \begin{itemize}
+    \item{(a)}
+    \begin{gather*}
+    \text{Thermal neutrons } \approx 0.0253\, eV \approx 2200\, m/s \\
+    \varPhi =  6 \times 3 \times 10^{8}\ = 1.8 \times 10^{9} Neutrons/cm^{2}\cdot sec 
+    \end{gather*}
+    \item{(b)}
+    \begin{gather*}
+    \text{From table II.3, } \textstyle \sum_{a} = 0.001137\, cm^{-1}\\
+    F_{a} = \textstyle \sum_{a}(E_{0})[\varPhi_{1} + \varPhi_{2} + \varPhi_{3} \dots]
+    = 0.001137 \times 1.8 \times 10^{6} = 2.05 \times 10^{6} Neutrons/cm^{2}\cdot sec 
+    \end{gather*}
+  \end{itemize}
+\end{sol}
+
+\question\\
+The control rods for a certain reactor are made of an alloy of cadmium 
+(5 w/o), indium (15 w/o) and silver (80 w/o). Calculate the rate at which 
+thermal neutrons are absorbed per gram of this material at a temperature of 
+$400\,^{\circ}\mathrm{C}$ in a 2,200 meters-per-second flux of 
+$5 \times 10^{13}$ neutrons/cm$^{2}\!\cdot$sec. 
+
+\textit{[Note: Silver is a 1/$\nu$ absorber.]}
+
+\begin{sol}
+  \begin{gather*}
+  F_{a,t} = \varPhi_{0} \sum_{i}((\textstyle \sum_{a}(E_{0}))_{i}(g_{a}(T))_{i}w_{i}
+  \quad \text{with} \quad g_{a}(T) = 1 \quad \text{for 1/v materials}\\
+  F_{a,t} = \varPhi_{0}[(\textstyle \sum_{a}(E_{0}))_{Cd}(g_{a}(T))_{Cd}w_{Cd} + (\textstyle \sum_{a}(E_{0}))_{In}(g_{a}(T))_{In}w_{In} + (\textstyle \sum_{a}(E_{0}))_{Ag}(g_{a}(T))_{Ag}w_{Ag}] \\
+  F_{a,t} = 5 \times 10^{13}[(113.56)(2.5589)(0.05) + (7.419)(1.1011)(0.15) + (3.725)(1)(0.8)]\\
+  F_{a,t} = 9.367\times 10^{14}\, Neutron/cm^{3}.s
+  \end{gather*}
+\end{sol}
+
+\newpage
+
+\question Find roots of $x^2- 8x = 9$.
+
+\begin{sol}
+  We proceed by factoring,
+  \begin{align*}
+    x^2- 8x - 9     & = 9-9         &  & \text{Subtract 9 on both sides.}         \\
+    x^2- x + 9x - 9 & = 0           &  & \text{Breaking the middle term.}         \\
+    (x - 1)(x + 9)  & = 0           &  & \text{Pulling out common } (x - 1).      \\
+    x               & \in \{1, -9\} &  & f(x)g(x) = 0 \Ra f(x) = 0 \vee g(x) = 0.
+  \end{align*}% the empty line bellow is needed to avoid extra space.
+  
+\end{sol}
+
+\question Figure \ref{wheel} shows two cipher wheels. The left one is from Jeffrey Hoffstein, et al. \cite{hoffstein2008introduction} (pg. 3). Write a Python 3 program that uses it to encrypt: \texttt{FOUR SCORE AND SEVEN YEARS AGO}.
+
+\begin{sol}
+  \img<wheel>[0.26]{Cipher wheels.}{cipher.png, diagram.jpg}
+
+  The Python program is given in listing \ref{cpr} and the encryption is given in table \ref{enc}.
+
+  \lstinputlisting[language=Python, caption={Python 3 implementing figure \ref{wheel} left wheel.}, label=cpr]{code/prog.py}
+
+  \tbl<enc>{Caesar cipher} {
+    Plain Text  & FOUR & SCORE & AND & SEVEN & YEARS & AGO \\
+    Cipher Text & KTZW & XHTWJ & FSI & XJAJS & DJFWX & FLT \\
+  }
+\end{sol}
+
+% citations
+\bibliographystyle{plain}
+\bibliography{citations}
+
+\end{document}
