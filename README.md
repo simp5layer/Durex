@@ -1,1 +1,1 @@
-I mean latex. Repo template for any homework thrown at you.
+I mean latex repo template for any homework thrown at you.
